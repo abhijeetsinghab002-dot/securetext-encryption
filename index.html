@@ -1,0 +1,12 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>SecureText</title><link rel="stylesheet" href="styles.css"></head>
+<body><main class="shell">
+<header><div class="logo">S</div><div><p class="tag">AES-256-GCM</p><h1>SecureText</h1><p class="sub">Encrypt and decrypt text locally in your browser.</p></div></header>
+<section class="card" aria-labelledby="title">
+<div class="tabs" role="tablist"><button id="encrypt-tab" class="tab active" role="tab" aria-selected="true">Encrypt</button><button id="decrypt-tab" class="tab" role="tab" aria-selected="false">Decrypt</button></div>
+<h2 id="title">Encrypt a message</h2><label id="input-label" for="input">Plain text</label><textarea id="input" rows="7" placeholder="Enter the text you want to protect..."></textarea>
+<label class="password-label" for="password">Password</label><div class="password-row"><input id="password" type="password" autocomplete="new-password" placeholder="Use a strong password"><button id="show" class="secondary">Show</button></div><p class="hint">At least 8 characters. Your password is never stored or transmitted.</p>
+<button id="action" class="primary">Encrypt text</button><p id="status" class="status" role="status" aria-live="polite"></p>
+<div class="result"><div class="result-head"><label for="output">Result</label><button id="copy" class="secondary">Copy</button></div><textarea id="output" rows="7" readonly placeholder="Your encrypted result will appear here."></textarea></div>
+</section><footer>Fresh random salt and IV are generated for every encryption.</footer>
+</main><script src="app.js"></script></body></html>
